@@ -1,0 +1,16 @@
+body {
+  background-color: #161616;
+  color: #ddd;
+  padding: 50px;
+}
+h1 {
+  color: #eef;
+  text-align: center;
+}
+.status {
+  margin-top: 40px;
+}
+.status > h2 {
+  font-size: 23px;
+  text-align: center;
+}
