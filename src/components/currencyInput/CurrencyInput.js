@@ -7,11 +7,13 @@ function CurrencyInput(props) {
       <input
         type="text"
         value={props.amount}
-        onChange={(ev) => props.onAmountChange(ev.target.value)}
+        onChange={(e) =>
+          props.onHandleChange(props.id, e.target.value, "amount")
+        }
       />
       <select
         value={props.currency}
-        onChange={(ev) => props.onCurrencyChange(ev.target.value)}
+        onChange={(e) => props.onHandleChange(props.id, e.target.value)}
       >
         {props.currencies.map((currency, index) => (
           <option key={index} value={currency}>
@@ -27,8 +29,7 @@ CurrencyInput.propTypes = {
   amount: PropTypes.number.isRequired,
   currency: PropTypes.string.isRequired,
   currencies: PropTypes.array,
-  onAmountChange: PropTypes.func,
-  onCurrencyChange: PropTypes.func,
+  onHandleChange: PropTypes.func,
 };
 
 export default CurrencyInput;
